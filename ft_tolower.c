@@ -6,13 +6,13 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 00:11:33 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/05/29 02:54:38 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/05/29 22:38:41 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+int		ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;

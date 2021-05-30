@@ -6,31 +6,41 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 02:17:31 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/05/29 02:55:37 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/05/29 22:38:36 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
-
-int		ft_tolower(int c);
+#include <string.h>
 
 int		main(void)
 {
-	char	c;
-	char	result;
-	c = 'I';
-	result = ft_tolower(c);
-
-	printf("ft_tolower(%c) = %c\n", c, result);
+	char	a[20]="Strlen";
+	char	b[20]={'S','t','r','l','e','n','\0'};
 	
-	c = 'i';
-	result = ft_tolower(c);
+	printf("\n### Test: ft_strlen ###\n\n");
 
-	printf("ft_tolower(%c) = %c\n", c, result);
-	
-	c = '+';
-	result = ft_tolower(c);
+	printf("a = \"Strlen\";\n");
+	printf("b = {'S','t','r','l','e','n','\\0'};\n\n");
 
-	printf("ft_tolower(%c) = %c\n", c, result);
+	if (ft_strlen(a) == strlen(a))
+	{
+		printf("... OK > strlen(a): %zu\n", strlen(a));
+		printf("... OK > ft_strlen(a): %zu\n", ft_strlen(a));
+	} else {
+		printf(".. K.O > strlen(a): %zu\n", strlen(a));
+		printf(".. K.O > ft_strlen(a): %zu\n", ft_strlen(a));
+	}
+
+	if (ft_strlen(b) == strlen(b))
+	{
+		printf("... OK > strlen(b): %zu\n", strlen(b));
+		printf("... OK > ft_strlen(b): %zu\n", ft_strlen(b));
+	} else {
+		printf(".. K.O > strlen(a): %zu\n", strlen(b));
+		printf(".. K.O > ft_strlen(a): %zu\n", ft_strlen(b));
+	}
+
 	return (0);
 }
