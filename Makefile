@@ -1,6 +1,5 @@
-SRC			= ft_strlen.c
-
-OBJ			= ${SRC:.c=.o}
+SRC			= ft_tolower.c
+OBJ			= $(SRC:.c=.o)
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 LIBFLAGS	= rcs
@@ -9,8 +8,8 @@ RM			= rm -f
 
 all: 		$(NAME)
 
-$(NAME):	
-			$(CC) $(CFLAGS) -c $(SRC) -o $(OBJ)
+$(NAME):
+			$(CC) $(CFLAGS) -c $(SRC)
 			ar $(LIBFLAGS) $(NAME) $(OBJ)
 
 clean:
