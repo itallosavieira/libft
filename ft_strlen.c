@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 01:56:23 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/02 07:30:03 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/02 19:50:39 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlen(const char *s)
 {
 	int	i;
-	
+
 	i = 0;
 	while (s[i])
 		i++;

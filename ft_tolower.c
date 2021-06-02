@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 07:36:09 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/02 15:06:33 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/02 19:45:27 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/02 19:50:38 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int ch)
+int	ft_tolower(int ch)
 {
 	if (ch >= 'A' && ch <= 'Z')
 		ch += 32;
