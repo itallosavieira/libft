@@ -1,9 +1,12 @@
+NAME		= libft.a
+
 SRC			= ft_tolower.c
+
 OBJ			= $(SRC:.c=.o)
+
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 LIBFLAGS	= rcs
-NAME		= libft.a
 RM			= rm -f
 
 all: 		$(NAME)
@@ -19,5 +22,6 @@ fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean all
+
 
 .PHONY:		all clean fclean re
