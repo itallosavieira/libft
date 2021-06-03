@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 02:02:00 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/02 23:28:25 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/03 02:39:01 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+#include <limits.h>
 
+int 	ft_atoi(const char *nptr);
 int		ft_isalnum(int arg);
 int		ft_isalpha(int arg);
 int		ft_isascii(int arg);
