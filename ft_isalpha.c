@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/28 02:02:00 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/02 23:28:25 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/02 23:22:11 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/02 23:28:39 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
-# include <stdlib.h>
+#include "libft.h"
 
-int		ft_isalnum(int arg);
-int		ft_isalpha(int arg);
-int		ft_isascii(int arg);
-int		ft_isdigit(int arg);
-int		ft_isprint(int arg);
-size_t	ft_strlen(const char *s);
-int		ft_tolower(int ch);
-int		ft_upper(int ch);
-
-#endif
+int	ft_isalpha(int arg)
+{
+	if ((arg >= 'a' && arg <= 'z') ||
+		(arg >= 'A' && arg <= 'Z'))
+		return (1);
+	return (0);
+}

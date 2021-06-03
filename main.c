@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/02 22:56:09 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/02 23:29:36 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 int	main()
 {
 	char	c;
-	c = 32;
+	c = 'Z';
 
-	printf(" %c : %d", c, ft_isprint(c));
+	printf(" %c : %d\n", c, isalnum(c));
+	printf(" %c : %d\n", c, ft_isalnum(c));
 	return (0);
 }
