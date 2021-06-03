@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/28 02:02:00 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/02 22:35:11 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/02 22:12:31 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/02 22:57:38 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
-# include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s);
-int		ft_tolower(int ch);
-int		ft_upper(int ch);
-int		ft_isprint(int arg);
-
-#endif
+int	ft_isprint(int arg)
+{
+	if (arg >= 32 && arg <= 126)
+		return (1);
+	return (0);
+}

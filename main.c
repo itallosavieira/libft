@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/28 02:02:00 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/02 22:35:11 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/02 22:56:09 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
-# include <stdlib.h>
+#include "libft.h"
+#include <ctype.h>
+#include <stdio.h>
 
-size_t	ft_strlen(const char *s);
-int		ft_tolower(int ch);
-int		ft_upper(int ch);
-int		ft_isprint(int arg);
+int	main()
+{
+	char	c;
+	c = 32;
 
-#endif
+	printf(" %c : %d", c, ft_isprint(c));
+	return (0);
+}
