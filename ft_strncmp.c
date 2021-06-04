@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/04 03:10:05 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/04 01:44:40 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/04 03:12:12 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
 
-int main()
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*s1={"itall"};
-	char	*s2={"itallo"};
+	int				i;
+	unsigned char	*u_s1;
+	unsigned char	*u_s2;
 
-	int	or=strncmp(s1, s2, 10);
-	int	ft=ft_strncmp(s1, s2, 10);
-
-	printf("or : %d \nft : %d \n", or, ft);
-	return 0;
+	i = 0;
+	u_s1 = (unsigned char *)s1;
+	u_s2 = (unsigned char *)s2;
+	while (i < n && (u_s1[i] || u_s2[i]))
+	{
+		if (u_s1[i] != u_s2[i])
+			return (u_s1[i] - u_s2[i]);
+		i++;
+	}
+	return (0);
 }
