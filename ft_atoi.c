@@ -6,20 +6,20 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 23:32:58 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/03 02:36:13 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/04 01:16:12 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(char c)
+static int	ft_isspace(char ch)
 {
-	if (c == '\t'
-		|| c == '\v'
-		|| c == '\r'
-		|| c == '\n'
-		|| c == '\f'
-		|| c == ' ')
+	if (ch == '\t'
+		|| ch == '\v'
+		|| ch == '\r'
+		|| ch == '\n'
+		|| ch == '\f'
+		|| ch == ' ')
 		return (1);
 	return (0);
 }
