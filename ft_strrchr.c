@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/06 15:24:35 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/06 00:39:33 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/06 13:08:16 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main ()
+char	*ft_strrchr(const char *s, int c)
 {
+	const char	*last;
 
-    char dest[50] = "itallo";
-	char src[50] = " sa";
-    printf("before: %s\n", dest);
-
-	memcpy(dest, src, 3);
-    printf("after: %s\n", dest);
-
-    return (0);
+	last = NULL;
+	while (*s++)
+	{
+		if (*s == (char)c)
+			last = s;
+	}
+	return ((char *)last);
 }
