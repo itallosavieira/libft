@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/06 15:24:35 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/06 19:24:56 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 int main ()
 {
-
-    char dest[50] = "itallo";
-	char src[50] = " sa";
-    printf("before: %s\n", dest);
-
-	memcpy(dest, src, 3);
-    printf("after: %s\n", dest);
-
-    return (0);
+	char dest[50] = "itallo";
+	char dest2[50] = "itallo";
+	char src[50] = "   -";
+	printf("before: %s\n", dest);
+	ft_memcpy(dest, src, 6);
+	printf("after: %s\n", dest);
+	memcpy(dest2, src, 6);
+	printf("after: %s\n", dest2);
+	return (0);
 }

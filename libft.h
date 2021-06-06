@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 02:02:00 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/06 14:11:28 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/06 16:03:35 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		ft_isalpha(int arg);
 int		ft_isascii(int arg);
 int		ft_isdigit(int arg);
 int		ft_isprint(int arg);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t num);
