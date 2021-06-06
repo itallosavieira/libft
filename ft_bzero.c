@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/06 15:24:35 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/06 13:59:04 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/06 15:09:47 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main ()
+void	ft_bzero(void *s, size_t n)
 {
-
-    char dest[50] = "itallo";
-	char src[50] = " sa";
-    printf("before: %s\n", dest);
-
-	memcpy(dest, src, 3);
-    printf("after: %s\n", dest);
-
-    return (0);
+	ft_memset (s, 0, n);
 }
