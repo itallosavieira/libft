@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/07 23:08:58 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/07 16:30:22 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/07 23:09:04 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main()
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
+	size_t	i;
 
-	return(0);
+	i = 0;
+	if (!(src))
+		return (0);
+	if (size > 0)
+	{
+		while (*(src + i) && i < (size - 1))
+		{
+			*(dest + i) = *(src + i);
+			i++;
+		}
+		*(dest + i) = '\0';
+	}
+	while (*(src + i))
+		i++;
+	return (i);
 }
