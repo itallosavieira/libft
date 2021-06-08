@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/08 03:32:07 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/07 16:30:22 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/08 03:33:36 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-
-int main()
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-    char first[] = "This is ";
-    char last[] = "a potentially long string";
-    int r;
-    int size = 34;
-    char buffer[size];
+	size_t	i;
+	size_t	dest_size;
+	size_t	src_size;
+	size_t	src_i;
 
-    strcpy(buffer,first);
-    r = ft_strlcat(buffer,last,size);
-
-    puts(buffer);
-    printf("Value returned: %d\n",r);
-    if( r > size )
-        puts("String truncated");
-    else
-        puts("String was fully copied");
-
-    return(0);
+	dest_size = ft_strlen(dest);
+	src_size = ft_strlen(src);
+	i = dest_size;
+	src_i = 0;
+	while (*(src + src_i))
+	{
+		*(dest + i) = *(src + src_i);
+		i++;
+		src_i++;
+		if (i == size - 1)
+			break ;
+	}
+	*(dest + i) = '\0';
+	return (dest_size + src_size);
 }
