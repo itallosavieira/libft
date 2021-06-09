@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/09 14:09:38 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/09 13:59:30 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/09 14:13:04 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main()
+char	*ft_strdup(const char *s)
 {
-    char source[] = "GeeksForGeeks";
+	size_t	size;
+	char	*s_cpy;
 
-    // A copy of source is created dynamically
-    // and pointer to copy is returned.
-    char* target = ft_strdup(source);
-
-    printf("%s", target);
-    return 0;
+	size = ft_strlen(s) + 1;
+	s_cpy = (char *)malloc(size);
+	if (!(s_cpy))
+		return (NULL);
+	ft_strlcpy(s_cpy, s, size);
+	return (s_cpy);
 }
