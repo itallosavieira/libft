@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/09 17:56:18 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/09 17:28:20 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/09 18:02:02 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-
-int main()
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    char s1[] = "itallo";
-	char s2[] = " sa vieira";
+	size_t	total_size;
+	char	*sj;
 
-
-    printf("%s\n", ft_strjoin(s1, s2));
-    return 0;
+	if(!(s1 || s2))
+		return (NULL);
+	total_size = ft_strlen(s1) + ft_strlen(s2);
+	sj = (char *)malloc((total_size + 1) * sizeof(char));
+	if (!(sj))
+		return (NULL);
+	while (*s1)
+		*sj++ = *s1++;
+	while (*s2)
+		*sj++ = *s2++;
+	*sj = '\0';
+	return (sj - total_size);
 }
