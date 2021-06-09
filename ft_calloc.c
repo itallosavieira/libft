@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/09 13:55:30 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/09 13:37:40 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/09 13:55:57 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main()
+void	*ft_calloc(size_t n, size_t size)
 {
-	int	*p;
-	p = (int *)malloc(2 * sizeof(int));
-	printf("%i", *(p+1));
-	return (0);
+	size_t	total;
+	char	*buffer;
+
+	total = n * size;
+	buffer = malloc(total);
+	if (!buffer || total > INT_MAX)
+		return (NULL);
+	ft_bzero(buffer, total);
+	return ((void *)buffer);
 }

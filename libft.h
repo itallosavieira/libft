@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 02:02:00 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/08 03:41:11 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/09 13:56:04 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t n, size_t size);
 int		ft_isalnum(int arg);
 int		ft_isalpha(int arg);
 int		ft_isascii(int arg);
