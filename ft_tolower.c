@@ -6,15 +6,15 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 19:45:27 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/02 19:50:38 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/09 17:26:53 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int ch)
+int	ft_tolower(int c)
 {
-	if (ch >= 'A' && ch <= 'Z')
-		ch += 32;
-	return (ch);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
