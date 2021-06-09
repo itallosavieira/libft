@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 15:57:15 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/07 16:29:05 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:26:49 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (*su1 != *su2)
 			return ((int)(*su1 - *su2));
-		*su1++;
-		*su2++;
+		su1++;
+		su2++;
 	}
 	return (0);
 }

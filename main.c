@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 22:17:22 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/09 14:09:38 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:26:43 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 int main()
 {
-    char source[] = "GeeksForGeeks";
+    char s1[] = "GeeksForG";
+	char s2[] = "";
+	int	result = ft_memcmp(s1, s2, 14);
+	int	result2 = memcmp(s1, s2, 14);
 
-    // A copy of source is created dynamically
-    // and pointer to copy is returned.
-    char* target = ft_strdup(source);
 
-    printf("%s", target);
+    printf("%d | %d\n", result, result2);
     return 0;
 }
