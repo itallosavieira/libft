@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 15:14:29 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/07 15:01:03 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/10 01:21:41 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*destc;
-	char	*srcc;
+	unsigned char	*destc;
+	unsigned char	*srcc;
 
-	destc = (char *)dest;
-	srcc = (char *)src;
-	if (!n)
-		return (destc);
+	destc = (unsigned char *)dest;
+	srcc = (unsigned char *)src;
+	if (src == NULL && dest == NULL)
+		return (dest);
 	while (n--)
 	{
 		*destc++ = *srcc++;

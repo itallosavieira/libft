@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 23:09:19 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/02 23:28:05 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/10 01:41:51 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isalnum(int arg)
 {
-	if (ft_isdigit(arg) || ft_isalpha(arg))
-		return (1);
-	return (0);
+	return (ft_isalpha(arg) || ft_isdigit(arg));
 }

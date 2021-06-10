@@ -6,7 +6,7 @@
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 15:14:29 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/06 20:40:59 by isa-viei         ###   ########.fr       */
+/*   Updated: 2021/06/10 00:30:17 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 
 	destu = (unsigned char *)dest;
 	srcu = (unsigned char *)src;
-	while (n--)
+	while (n-- > 0)
 	{
 		*destu = *srcu;
 		if (*srcu == (unsigned char)c)
-			return (dest + 1);
+			return ((void *)destu + 1);
 		destu++;
 		srcu++;
 	}
