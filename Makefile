@@ -1,5 +1,3 @@
-NAME		=	libft.a
-
 SRC			=	ft_atoi.c		\
 				ft_bzero.c		\
 				ft_calloc.c		\
@@ -21,7 +19,6 @@ SRC			=	ft_atoi.c		\
 				ft_putstr_fd.c	\
 				ft_split.c		\
 				ft_strmapi.c	\
-				ft_strtrim.c	\
 				ft_strchr.c		\
 				ft_strdup.c		\
 				ft_strjoin.c	\
@@ -35,6 +32,8 @@ SRC			=	ft_atoi.c		\
 				ft_substr.c		\
 				ft_tolower.c	\
 				ft_toupper.c	\
+NAME		=	libft.a
+
 
 OBJ			=	$(SRC:.c=.o)
 
