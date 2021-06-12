@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 15:14:29 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/12 13:03:19 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/10 15:13:34 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/10 15:14:02 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned char	*destu;
-	unsigned char	*srcu;
+	unsigned int	i;
+	char			*str;
 
-	destu = (unsigned char *)dest;
-	srcu = (unsigned char *)src;
-	while (n-- > 0)
+	if (!s)
+		return (NULL);
+	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		*destu = *srcu;
-		if (*srcu == (unsigned char)c)
-			return ((void *)destu + 1);
-		destu++;
-		srcu++;
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	return (NULL);
+	str[i] = '\0';
+	return (str);
 }

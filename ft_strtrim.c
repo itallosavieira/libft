@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 15:14:29 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/12 13:03:19 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/10 01:48:06 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/12 13:02:28 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char	*destu;
-	unsigned char	*srcu;
+	size_t	size;
 
-	destu = (unsigned char *)dest;
-	srcu = (unsigned char *)src;
-	while (n-- > 0)
-	{
-		*destu = *srcu;
-		if (*srcu == (unsigned char)c)
-			return ((void *)destu + 1);
-		destu++;
-		srcu++;
-	}
-	return (NULL);
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	size = ft_strlen(s1);
+	while (size && ft_strchr(set, s1[size]))
+		size--;
+	return (ft_substr(s1, 0, size + 1));
 }

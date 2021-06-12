@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isa-viei <isa-viei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 15:14:29 by isa-viei          #+#    #+#             */
-/*   Updated: 2021/06/12 13:03:19 by isa-viei         ###   ########.fr       */
+/*   Created: 2021/06/10 15:13:17 by isa-viei          #+#    #+#             */
+/*   Updated: 2021/06/12 13:02:29 by isa-viei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	*destu;
-	unsigned char	*srcu;
-
-	destu = (unsigned char *)dest;
-	srcu = (unsigned char *)src;
-	while (n-- > 0)
-	{
-		*destu = *srcu;
-		if (*srcu == (unsigned char)c)
-			return ((void *)destu + 1);
-		destu++;
-		srcu++;
-	}
-	return (NULL);
+	write(fd, &c, 1);
 }
